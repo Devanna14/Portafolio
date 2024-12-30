@@ -314,7 +314,7 @@ ul > li {
 .projects,
 .contact {
   width: 100%;
-  height: calc(100vh - 50px - 20px);
+  height: 100vh;
   flex-shrink: 0;
   /* Evita que los elementos se reduzcan */
   scroll-snap-align: start;
@@ -325,7 +325,7 @@ ul > li {
 /* ********* PANTALLA PRINCIPAL ********** */
 .home-container {
   width: 80%;
-  height: 100%;
+  height: calc(100% - 50px - 20px);
   display: flex;
   gap: 15px;
   align-items: center;
@@ -333,6 +333,7 @@ ul > li {
   margin: auto auto;
   color: white;
   position: relative;
+  padding-top: 50px;
 }
 
 .home-container > h2 {
@@ -423,15 +424,17 @@ ul > li {
 
 /* ****** PANTALLA EXPERIENCIA ****** */
 .exp {
-  margin-top: 20px;
-  justify-content: center;
-  /* Espacio entre secciones */
+  width: 100%;
+  height: calc(100vh
+   - 50px - 20px);
+  padding-top: 20px;
+  overflow-y: auto;
 }
 
 .exp-container {
   width: 95%;
-  height: 100%;
   color: white;
+  padding-top: 50px;
 }
 
 .exp-container > h2 {
@@ -454,16 +457,18 @@ ul > li {
   justify-content: center;
   align-items: center;
   overflow-x: scroll;
+  flex-wrap: wrap;
   /* Habilita siempre el scroll horizontal */
-  gap: 20px;
+  gap: 10px;
   /* Espacio entre los items */
   padding: 10px;
   /* Espaciado interno si es necesario */
   width: 100%;
   /* El contenedor puede ocupar todo el ancho disponible */
-  max-width: 100%;
+  max-height: calc(100vh - 50px -20px);
   /* Aseguramos que no se desborde el contenedor */
   box-sizing: border-box;
+  overflow-y: hidden;
   /* Incluye padding y borde en el cálculo del tamaño total */
 }
 
@@ -509,7 +514,7 @@ ul > li {
 
 .item-exp > .item-exp-card > p {
   font-family: "Montserrat", serif;
-  font-size: 1rem;
+  font-size: 0.9rem;
   text-align: justify;
   margin-left: auto;
   margin-right: auto;
@@ -536,7 +541,7 @@ ul > li {
 
 .projects {
   height: 100%;
-  margin-top: 20px;
+  padding-top: 20px;
 }
 
 .projects-container {
@@ -805,7 +810,9 @@ footer {
   .container-scroll {
     margin: 0;
     padding: 0;
-    height: calc(auto - 50px);
+    height: calc(100vh - 50px);
+    display: flex;
+    flex-direction: column;
     overflow-y: scroll;
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
