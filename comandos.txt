@@ -1,0 +1,60 @@
+Control de versiones GIT
+
+-ls: Permite consultar las carpetas a donde se tiene acceso
+-pwd: Permite consultar la carpeta actual en la que se esta
+-mkdir: permite crear directorios
+-code .: Abre la carpeta actual con el visual studio code
+-git config --global user.name "usuario": configurar a nivel global para trabajar en git dentro de nuestro equipo crea archivo configuracion de usuariio
+-git config --global user.email "cecylar14@gmail.com"
+-touch "nombre.extension": permite crear ficheros (archivos)
+-git init: permite inicializar el cotrol de versiones git (se crea el repositorio)
+
+https://ohmyz.sh/ personalizar al terminal
+
+-git branch -m "main": cambiar el nombre de la rama principal (sin comillas)
+-git status: ver el estatus de git de nuestro proyecto
+-git add "archivo.py" para guardar el estado del proyecto (sin comillas), esto solo prepara el archivo seleccionado para guardar el estatus del proyecto como esta actualmente
+-git commit -a -m "Comentario": es commit (lo que tenemos en local a un respaldo como una fotografia, siempre se debe de agregar comentarios)
+-se abre vim un editor de texto y para comenzar a trabajar con el debemos usar (i) (vim solo se abre si no agregamos -a y -m)
+-git log: para poder ver lo que se a guardado 
+-git checkout archivo.py: para poder reveertir o evitar guardar las modificaciones actuales te situas en un punto en concreto
+-git reset permite volver a la fotografia o ultimo cambio guardado
+-git log --graph: permite formatear o visualizar los commit en ramas 
+-git log --graph --pretty=oneline: permite visualizar en una sola linea
+
+git config --global alias.tree "log --graph --decorate --
+all --oneline": Git nos permite agregar variables globales con el archivo confi para poder ejecutar comandos
+-touch .gitignore: creamos archivo que nos permita ignorar las carpetas que no se hacen commit, dentro del archivo se agrega todo lo que deseamos ignorar (**/carpeta_ignorada)
+
+*Como la creacion de .gitignore afectara al proyecto, muestra que es un fichero al que se puede modificar y volvemos a lo mismo de antes con los archivos con 
+los que no deseamos agregar o modificar, para ellos se agrega un commit a la carpeta .gitignore especificando lo que se añade para evitar que se nos siga visualizando con
+el git status
+
+-git dif: nos permite visualizar los cambios aplicados sin commit al proyecto actual con respecto al ultimo cambio guardado
+
+**** DESPLAZAMIENTO
+git checkout ID43abaff: mediante el log pidemos observar el id asociado a cada uno de los cambios, y con el checkour podemos establecer la cabecera en donde queremos apuntar ahoea
+para volver y consultar que es lo qe habia en ese cambio
+
+git reset --hard ID para volver y borrar los cambios a un determinado punto
+git reflog muestra todo el historico de interacciones que se han hecho en git
+
+git tag: funcionan para guardar referencias, como etiquetas para visualizar mejor visualmente
+git add .: permite añadir todos los ficheros que estan pendientes
+git checkout tags/nombre: permite moverse entre tags, y hace que esto sea mucho mas sencillo identificar los cambios
+
+RAMIFICACIONES
+git branch nombre: crea una nueva rama que sirve como nuevo flujo independiente del main
+git switch branchName: permite apuntar la cabeza hacia la rama deseada
+
+git merge :obtiene los cambios de una rama, esto es importante para ver si los otros flujos de trabajo siguen siendo 
+compatibles con el trabajo que realizamos en nuestra rama
+
+git stash: guarda como tipo estatus temporal sin necesidad de hacer commit
+git stash list: permite visualizar los temporales pendientes
+git stash pop: permite recuperar lo guardado en temporal
+git stash drop: permite borrar el estado temporal
+
+git checkout archivo.rxte: permite deshacer cambios inclusive de un archivo
+
+git branch -d: elimina las ramas (solo temporal aun se puede hacer referencia para volver a trabajar)
