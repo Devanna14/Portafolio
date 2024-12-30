@@ -115,28 +115,25 @@ ul {
   flex-direction: column;
 }
 
-ul>li {
+ul > li {
   transition: background-color 0.3s ease;
   /* Transición para el color de fondo */
 }
 
-ul>li:hover {
-  background-color: rgba(140,
-      0,
-      255,
-      0.897);
+ul > li:hover {
+  background-color: rgba(140, 0, 255, 0.897);
   /* Color de fondo al hacer hover */
   z-index: 1;
   /* Asegura que el elemento hover esté por encima */
 }
 
 /* No hay desenfoque por defecto */
-ul>li {
+ul > li {
   filter: blur(0);
   /* Sin desenfoque inicialmente */
 }
 
-.modal{
+.modal {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -151,7 +148,7 @@ ul>li {
   z-index: 101;
 }
 
-.modal-card{
+.modal-card {
   width: 50%;
   height: 45%;
   position: relative;
@@ -162,26 +159,26 @@ ul>li {
   overflow: hidden;
 }
 
-.modal-header{
+.modal-header {
   width: 100%;
   height: 35px;
   position: relative;
   background-color: #180f30;
 }
 
-.modal-header > i{
+.modal-header > i {
   position: absolute;
   right: 0;
   top: 0;
 }
 
-.modal-body{
+.modal-body {
   width: 100%;
   height: calc(100% - 35px - 55px); /* Resta la altura del header y footer */
   background-color: #611400;
 }
 
-.modal-footer{
+.modal-footer {
   width: 100%;
   height: 55px;
   background-color: blueviolet;
@@ -315,12 +312,12 @@ ul>li {
 .projects,
 .contact {
   width: 100%;
-  height: 100%;
+  max-height: 100%;
   flex-shrink: 0;
   /* Evita que los elementos se reduzcan */
   scroll-snap-align: start;
   /* Alinea los elementos en el principio del contenedor cuando el scroll los alcanza */
-  padding: 20px;
+  padding: 15px;
   box-sizing: border-box;
 }
 
@@ -333,18 +330,18 @@ ul>li {
   position: relative;
 }
 
-.home-container>h2 {
+.home-container > h2 {
   font-family: "Montserrat", serif;
   font-size: 2.5rem;
   padding: 10px 5%;
 }
 
-.home-container>h3 {
+.home-container > h3 {
   font-family: "Montserrat", serif;
   font-size: 1.5rem;
 }
 
-.home-container>p {
+.home-container > p {
   width: 70%;
   font-family: "Montserrat", serif;
   font-size: 1.2rem;
@@ -400,18 +397,18 @@ ul>li {
   color: white;
 }
 
-.about-container>h2 {
+.about-container > h2 {
   font-family: "Montserrat", serif;
   font-size: 3rem;
   padding: 10px 5%;
 }
 
-.about-container>h3 {
+.about-container > h3 {
   font-family: "Montserrat", serif;
   font-size: 3rem;
 }
 
-.about-container>p {
+.about-container > p {
   font-family: "Montserrat", serif;
   font-size: 2rem;
 }
@@ -431,13 +428,13 @@ ul>li {
   color: white;
 }
 
-.exp-container>h2 {
+.exp-container > h2 {
   font-family: "Montserrat", serif;
   font-size: 2rem;
   padding: 10px 5%;
 }
 
-.exp-container>p {
+.exp-container > p {
   font-family: "Montserrat", serif;
   font-size: 1rem;
 }
@@ -487,24 +484,24 @@ ul>li {
   box-shadow: 0px 6px 15px -3px rgba(142, 0, 255, 0.6);
 }
 
-.item-exp-card>img {
+.item-exp-card > img {
   padding-top: 15px;
 }
 
-.item-exp>.item-exp-card>h4 {
+.item-exp > .item-exp-card > h4 {
   font-family: "Montserrat", serif;
   font-size: 1.3rem;
   margin-top: 10px;
 }
 
-.item-exp>.item-exp-card>h5 {
+.item-exp > .item-exp-card > h5 {
   font-family: "Montserrat", serif;
   font-weight: 400;
   font-size: 0.8;
   padding: 10px 8px;
 }
 
-.item-exp>.item-exp-card>p {
+.item-exp > .item-exp-card > p {
   font-family: "Montserrat", serif;
   font-size: 1rem;
   text-align: justify;
@@ -525,7 +522,7 @@ ul>li {
 }
 
 /* Mostrar el contenido cuando se hace hover */
-.item-exp-card:hover>p {
+.item-exp-card:hover > p {
   opacity: 1;
   visibility: visible;
   transition: opacity 0.3s ease-in-out, visibility 0s linear 0s;
@@ -544,13 +541,13 @@ ul>li {
   overflow-y: auto;
 }
 
-.projects-container>h2 {
+.projects-container > h2 {
   font-family: "Montserrat", serif;
   font-size: 2rem;
   padding: 10px 5%;
 }
 
-.projects-container>p {
+.projects-container > p {
   font-family: "Montserrat", serif;
   font-size: 1rem;
   margin-bottom: 10px;
@@ -607,7 +604,7 @@ ul>li {
   padding-left: 30px;
 }
 
-.description-item-project>h4 {
+.description-item-project > h4 {
   font-family: "Montserrat", serif;
   font-size: 1.2rem;
   margin-bottom: 5px;
@@ -716,18 +713,18 @@ ul>li {
   color: white;
 }
 
-.contact-container>h2 {
+.contact-container > h2 {
   font-family: "Montserrat", serif;
   font-size: 4.5rem;
   padding: 10px 5%;
 }
 
-.contact-container>h3 {
+.contact-container > h3 {
   font-family: "Montserrat", serif;
   font-size: 3rem;
 }
 
-.contact-container>p {
+.contact-container > p {
   font-family: "Montserrat", serif;
   font-size: 2rem;
 }
@@ -738,11 +735,15 @@ ul>li {
   text-align: center;
   padding: 10px 0;
   position: absolute;
-  bottom: 40px;
+  bottom: 0;
   left: 0;
   right: 0;
   cursor: pointer;
-  animation: bounce 2s infinite;
+  /* animation: bounce 2s infinite; */
+}
+
+.scroll-icon > svg {
+  max-width: 100%;
 }
 
 .scroll-subtitle {
@@ -755,8 +756,8 @@ ul>li {
 /* FOOTER */
 footer {
   width: 100%;
-  height: 50px;
-  padding-bottom: 15px;
+  /* height: 50px; */
+  padding-bottom: 5px;
   bottom: 0;
   position: static;
   text-align: center;
@@ -765,6 +766,7 @@ footer {
   font-weight: 400;
   font-size: 0.9rem;
   z-index: 1;
+  background-color: #00000018;
 }
 
 /* ANIMACIONES */
@@ -784,3 +786,60 @@ footer {
 }
 
 /* MEDIA QUERY */
+/* PARA PANTALLAS MENORES A 1000PX */
+@media (max-width: 999px) {
+  .container-habilities {
+    max-width: 100%;
+    height: auto;
+    gap: 1;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+
+  .container-scroll {
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+  }
+
+  .home,
+  .about,
+  .exp,
+  .projects,
+  .contact {
+    min-height: 100%;
+  }
+
+  .home-container {
+    min-width: 100%;
+  }
+
+  .home-container > h2 {
+    font-size: 1.5rem;
+  }
+
+  .home-container > h3 {
+    font-size: 1.2rem;
+  }
+
+  .home-container > p {
+    font-size: 0.9rem;
+  }
+
+  /* .image-container{
+    margin-top: 20px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  } */
+
+  .scroll-icon {
+    max-height: 35%;
+  }
+
+  .scroll-icon > svg {
+    max-width: 10%;
+  }
+}
