@@ -846,18 +846,18 @@ footer {
   }
 
   .home-container > h2 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     text-align: center;
     padding-top: 20px;
   }
 
   .home-container > h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     text-align: center;
   }
 
   .home-container > p {
-    font-size: 1rem;
+    font-size: 0.8rem;
     margin-left: auto;
     margin-right: auto;
     margin-top: 15px;
@@ -920,5 +920,17 @@ footer {
     width: 100%;
     height: 50%;
     padding-top: 30px;
+  }
+
+  .description-item-project > h4 {
+    font-size: 1rem;
+  }
+
+  .projects-container > h2 {
+    font-size: 1.5rem;
+  }
+
+  .projects-container > p {
+    font-size: 0.8;
   }
 }
