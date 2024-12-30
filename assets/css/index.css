@@ -41,6 +41,7 @@ button {
 }
 
 .screen-menu {
+  height: 100vh;
   position: absolute;
   top: 0;
   left: 0;
@@ -308,24 +309,27 @@ ul > li {
 }
 
 .home,
-.about,
+.container-habilities,
 .exp,
 .projects,
 .contact {
   width: 100%;
-  height: 80vh;
+  height: calc(100vh - 50px - 20px);
   flex-shrink: 0;
   /* Evita que los elementos se reduzcan */
   scroll-snap-align: start;
   /* Alinea los elementos en el principio del contenedor cuando el scroll los alcanza */
-  padding: 15px;
   box-sizing: border-box;
 }
 
 /* ********* PANTALLA PRINCIPAL ********** */
 .home-container {
-  width: 75%;
+  width: 80%;
   height: 100%;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  flex-direction: column;
   margin: auto auto;
   color: white;
   position: relative;
@@ -333,27 +337,28 @@ ul > li {
 
 .home-container > h2 {
   font-family: "Montserrat", serif;
-  font-size: 2.5rem;
+  font-size: 3rem;
   padding: 10px 5%;
 }
 
 .home-container > h3 {
   font-family: "Montserrat", serif;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .home-container > p {
   width: 70%;
   font-family: "Montserrat", serif;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 .image-container {
-  width: 200px;
+  max-width: 250px;
   height: auto;
-  position: absolute;
+  padding-top: 10px;
+  /* position: absolute;
   right: 0;
-  top: 0;
+  top: 0; */
 }
 
 .img-profile {
@@ -736,7 +741,7 @@ ul > li {
   text-align: center;
   padding: 10px 0;
   position: absolute;
-  bottom: 0;
+  bottom: 100px;
   left: 0;
   right: 0;
   cursor: pointer;
@@ -811,27 +816,29 @@ footer {
   .exp,
   .projects,
   .contact {
-    min-height: 100vh; /* Esto hace que cada sección tome al menos el 100% de la altura de la ventana */
+    min-height: calc(100vh -70px -20px); /* Esto hace que cada sección tome al menos el 100% de la altura de la ventana */
     white-space: normal;
     word-wrap: break-word;
   }
 
   .home-container {
     min-width: 100%;
+    display: block;
   }
 
   .home-container > h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  .home-container > h3 {
     font-size: 1.5rem;
     text-align: center;
   }
 
-  .home-container > h3 {
-    font-size: 1.2rem;
-    text-align: center;
-  }
-
   .home-container > p {
-    font-size: 0.9rem;
+    font-size: 1rem;
     margin-left: auto;
     margin-right: auto;
     margin-top: 15px;
@@ -847,7 +854,10 @@ footer {
 
   .scroll-icon {
     max-height: 35%;
-    position: relative;
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
   }
 
   .scroll-icon > svg {
