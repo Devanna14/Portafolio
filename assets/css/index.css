@@ -788,7 +788,7 @@ footer {
 
 /* MEDIA QUERY */
 /* PARA PANTALLAS MENORES A 1000PX */
-@media (max-width: 999px) {
+@media (max-width: 780px) {
   .container-habilities {
     max-width: 100%;
     height: auto;
@@ -800,6 +800,7 @@ footer {
   .container-scroll {
     margin: 0;
     padding: 0;
+    height: calc(auto - 50px);
     overflow-y: scroll;
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
@@ -821,25 +822,32 @@ footer {
 
   .home-container > h2 {
     font-size: 1.5rem;
+    text-align: center;
   }
 
   .home-container > h3 {
     font-size: 1.2rem;
+    text-align: center;
   }
 
   .home-container > p {
     font-size: 0.9rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
   }
 
-  /* .image-container{
+  .image-container{
     margin-top: 20px;
     position: relative;
     margin-left: auto;
     margin-right: auto;
-  } */
+    margin-top: 20px;
+  }
 
   .scroll-icon {
     max-height: 35%;
+    position: relative;
   }
 
   .scroll-icon > svg {
