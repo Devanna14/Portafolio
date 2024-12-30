@@ -425,10 +425,12 @@ ul > li {
 /* ****** PANTALLA EXPERIENCIA ****** */
 .exp {
   width: 100%;
-  height: calc(100vh
-   - 50px - 20px);
+  height: calc(100vh - 50px - 20px);
   padding-top: 20px;
   overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 .exp-container {
@@ -456,7 +458,6 @@ ul > li {
   /* Disposición horizontal de los elementos */
   justify-content: center;
   align-items: center;
-  overflow-x: scroll;
   flex-wrap: wrap;
   /* Habilita siempre el scroll horizontal */
   gap: 10px;
@@ -496,6 +497,7 @@ ul > li {
 }
 
 .item-exp-card > img {
+  max-width: 100%;
   padding-top: 15px;
 }
 
@@ -540,12 +542,12 @@ ul > li {
 }
 
 .projects {
-  height: 100%;
-  padding-top: 20px;
+  height: calc(100vh - 50px);
+  padding-top: 50px;
 }
 
 .projects-container {
-  width: 100%;
+  width: 95%;
   height: 100%;
   margin: 0 auto;
   color: white;
@@ -562,6 +564,7 @@ ul > li {
   font-family: "Montserrat", serif;
   font-size: 1rem;
   margin-bottom: 10px;
+  padding-top: 10px;
 }
 
 .item-project {
@@ -570,6 +573,7 @@ ul > li {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 20px;
 }
 
@@ -582,8 +586,8 @@ ul > li {
 }
 
 .img-proyect {
-  width: 40%;
-  height: 100%;
+  width: 45%;
+  height: 75%;
   position: relative;
   transition: background-position 0.5s ease;
   /* Transición suave para mover la imagen */
@@ -592,25 +596,31 @@ ul > li {
 .img-appMuseo {
   background-image: url("../img/proyectos/appMuseo.png");
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+  background-size: cover;
+  background-position: top left;
 }
 
 .img-cpems {
   background-image: url("../img/proyectos/cpemsPlataforma.png");
   background-repeat: no-repeat;
   /* Hace que la imagen cubra el contenedor sin distorsión */
-  background-size: contain;
+  background-size: cover;
+  background-position: top left;
   /* La imagen cubre todo el div, sin escalar ni deformar */
 }
 
-.img-proyect:hover {
-  background-position: top left;
+.img-appMuseo:hover {
+  background-position: center;
+  /* Al hacer hover, mueve la imagen hacia la esquina superior izquierda */
+}
+
+.img-cpems:hover {
+  background-position: center;
   /* Al hacer hover, mueve la imagen hacia la esquina superior izquierda */
 }
 
 .description-item-project {
-  width: 100%;
+  width: 55%;
   height: 100%;
   padding-left: 30px;
 }
@@ -823,7 +833,9 @@ footer {
   .exp,
   .projects,
   .contact {
-    min-height: calc(100vh -70px -20px); /* Esto hace que cada sección tome al menos el 100% de la altura de la ventana */
+    min-height: calc(
+      100vh -50px -20px
+    ); /* Esto hace que cada sección tome al menos el 100% de la altura de la ventana */
     white-space: normal;
     word-wrap: break-word;
   }
@@ -851,7 +863,7 @@ footer {
     margin-top: 15px;
   }
 
-  .image-container{
+  .image-container {
     margin-top: 20px;
     position: relative;
     margin-left: auto;
@@ -870,4 +882,39 @@ footer {
   .scroll-icon > svg {
     max-width: 10%;
   }
+
+  .exp-container {
+    width: 95%;
+  }
+
+  .item-project {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .project-card {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+
+  .img-proyect {
+    width: 100%;
+    height: 50%;
+    position: relative;
+    transition: background-position 0.5s ease;
+  }
+
+  .description-item-project {
+    width: 100%;
+    height: 50%;
+    padding-top: 30px;
+  }
+
 }
