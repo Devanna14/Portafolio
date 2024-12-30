@@ -1,0 +1,786 @@
+nav {
+  background-color: transparent;
+  width: auto;
+  height: 85px;
+  padding: 10px 0;
+  -webkit-box-shadow: 0px 6px 15px -3px rgba(142, 0, 255, 0.6);
+  -moz-box-shadow: 0px 6px 15px -3px rgba(142, 0, 255, 0.6);
+  box-shadow: 0px 6px 15px -3px rgba(142, 0, 255, 0.6);
+  z-index: 100;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav,
+h1 {
+  font-family: "Great Vibes", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  font-size: 2.5rem;
+  padding-left: 15px;
+}
+
+button {
+  width: 50px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: 20px;
+  border: 0px;
+  background-color: transparent;
+}
+
+.icon-menu,
+.icon-menu-close {
+  color: white;
+  cursor: pointer;
+}
+
+.screen-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 0%;
+  background-color: #180f30;
+  transition: top 0.5s ease;
+  z-index: 100;
+}
+
+.icon-menu-close.disabled {
+  display: none;
+}
+
+.screen-menu {
+  height: 0px;
+  border: none;
+  overflow: hidden;
+  transition: height 0.5s ease;
+}
+
+.hidden {
+  height: 0px;
+  border: none !important;
+}
+
+.visible {
+  border: 1px solid rgba(140, 0, 255, 0.986) !important;
+}
+
+.screen-menu.disabled {
+  height: 100%;
+  transition: height 0.5s ease;
+}
+
+.screen-menu-button {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.menu-seccion {
+  width: auto;
+  height: 100vh;
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-size: 2.5rem;
+  font-style: normal;
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+ul,
+li {
+  width: 100%;
+  list-style: none;
+  margin: 10px 0;
+  cursor: pointer;
+  padding: 15px 0;
+  transition: filter 0.3s ease, background-color 0.3s ease;
+  /* Transición para el desenfoque y color */
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+}
+
+ul>li {
+  transition: background-color 0.3s ease;
+  /* Transición para el color de fondo */
+}
+
+ul>li:hover {
+  background-color: rgba(140,
+      0,
+      255,
+      0.897);
+  /* Color de fondo al hacer hover */
+  z-index: 1;
+  /* Asegura que el elemento hover esté por encima */
+}
+
+/* No hay desenfoque por defecto */
+ul>li {
+  filter: blur(0);
+  /* Sin desenfoque inicialmente */
+}
+
+.modal{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #1d1d1de0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 101;
+}
+
+.modal-card{
+  width: 50%;
+  height: 45%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  background-color: #4f5b93;
+  overflow: hidden;
+}
+
+.modal-header{
+  width: 100%;
+  height: 35px;
+  position: relative;
+  background-color: #180f30;
+}
+
+.modal-header > i{
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.modal-body{
+  width: 100%;
+  height: calc(100% - 35px - 55px); /* Resta la altura del header y footer */
+  background-color: #611400;
+}
+
+.modal-footer{
+  width: 100%;
+  height: 55px;
+  background-color: blueviolet;
+}
+
+.container-habilities {
+  width: 100%;
+  height: 85px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1;
+}
+
+.item {
+  width: 80px;
+  padding: 5px 10px;
+  height: 65px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 100%;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.icon-js {
+  color: white;
+}
+
+.item span {
+  font-size: 0.8rem;
+  /* Tamaño del porcentaje */
+  font-weight: 400;
+  margin-bottom: 15px;
+  /* Espacio entre el porcentaje y la barra */
+  font-family: "Montserrat", serif;
+  color: white;
+}
+
+.barra {
+  width: 100%;
+  /* Ancho total de la barra */
+  height: 10px;
+  /* Altura de la barra */
+  background-color: #e0e0e0;
+  /* Color de fondo de la barra */
+  border-radius: 5px;
+  /* Bordes redondeados para la barra */
+  overflow: hidden;
+}
+
+.porcentaje {
+  width: 5px;
+  /* Aquí va el porcentaje que quieres representar */
+  height: 2px;
+  background-color: #4caf50;
+  /* Color de la barra representativa */
+  border-radius: 5px;
+  /* Bordes redondeados para la parte activa de la barra */
+}
+
+/* Colores por cada icono personalizados */
+.fa-php {
+  color: #4f5b93;
+}
+
+.fa-html5 {
+  color: #e54c27;
+}
+
+.fa-css3-alt {
+  color: #1974bb;
+}
+
+.fa-android {
+  color: #3ddb86;
+}
+
+.fa-git-alt {
+  color: #f15135;
+}
+
+.fa-react {
+  color: #04d6fc;
+}
+
+.fa-js {
+  color: #f7e119;
+}
+
+.fa-laptop-code {
+  color: #8e24a9;
+}
+
+.fa-database {
+  color: #3e6e93;
+}
+
+/* SECCION DE CONTENIDOS */
+.container-scroll {
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  /* overflow-y: auto; */
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.home,
+.about,
+.exp,
+.projects,
+.contact {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  /* Evita que los elementos se reduzcan */
+  scroll-snap-align: start;
+  /* Alinea los elementos en el principio del contenedor cuando el scroll los alcanza */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* ********* PANTALLA PRINCIPAL ********** */
+.home-container {
+  width: 75%;
+  height: 100%;
+  margin: auto auto;
+  color: white;
+  position: relative;
+}
+
+.home-container>h2 {
+  font-family: "Montserrat", serif;
+  font-size: 2.5rem;
+  padding: 10px 5%;
+}
+
+.home-container>h3 {
+  font-family: "Montserrat", serif;
+  font-size: 1.5rem;
+}
+
+.home-container>p {
+  width: 70%;
+  font-family: "Montserrat", serif;
+  font-size: 1.2rem;
+}
+
+.image-container {
+  width: 200px;
+  height: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.img-profile {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  /* Necesario para posicionar la capa encima de la imagen */
+  display: inline-block;
+  border-radius: 10px;
+  border: 8px solid rgb(15, 16, 17);
+  transform: rotate(4deg);
+  -webkit-box-shadow: 0px 0px 2px 1px rgba(255, 255, 255, 0.4);
+  -moz-box-shadow: 0px 0px 2px 1px rgba(255, 255, 255, 0.4);
+  box-shadow: 0px 0px 2px 1px rgba(255, 255, 255, 0.4);
+}
+
+/* .color-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(140, 0, 255, 0.541);
+  opacity: 1;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+} */
+
+/* ********* PANTALLA PRINCIPAL ********** */
+
+/* PANTALLA DE SOBRE MÍ */
+.about {
+  margin-top: 20px;
+  /* Espacio entre secciones */
+}
+
+.about-container {
+  width: 85%;
+  height: 100%;
+  margin: auto auto;
+  color: white;
+}
+
+.about-container>h2 {
+  font-family: "Montserrat", serif;
+  font-size: 3rem;
+  padding: 10px 5%;
+}
+
+.about-container>h3 {
+  font-family: "Montserrat", serif;
+  font-size: 3rem;
+}
+
+.about-container>p {
+  font-family: "Montserrat", serif;
+  font-size: 2rem;
+}
+
+/* PANTALLA DE SOBRE MÍ */
+
+/* ****** PANTALLA EXPERIENCIA ****** */
+.exp {
+  margin-top: 20px;
+  justify-content: center;
+  /* Espacio entre secciones */
+}
+
+.exp-container {
+  width: 95%;
+  height: 100%;
+  color: white;
+}
+
+.exp-container>h2 {
+  font-family: "Montserrat", serif;
+  font-size: 2rem;
+  padding: 10px 5%;
+}
+
+.exp-container>p {
+  font-family: "Montserrat", serif;
+  font-size: 1rem;
+}
+
+/* ****** PANTALLA EXPERIENCIA ****** */
+
+/******* CONTENIDO PANTALLA DE EXPRERIENCIA ****** */
+.exp-container-history {
+  display: flex;
+  /* Disposición horizontal de los elementos */
+  justify-content: center;
+  align-items: center;
+  overflow-x: scroll;
+  /* Habilita siempre el scroll horizontal */
+  gap: 20px;
+  /* Espacio entre los items */
+  padding: 10px;
+  /* Espaciado interno si es necesario */
+  width: 100%;
+  /* El contenedor puede ocupar todo el ancho disponible */
+  max-width: 100%;
+  /* Aseguramos que no se desborde el contenedor */
+  box-sizing: border-box;
+  /* Incluye padding y borde en el cálculo del tamaño total */
+}
+
+.item-exp {
+  flex: 0 0 auto;
+  /* Asegura que los elementos no se estiren ni compriman */
+  width: auto;
+  /* Ancho fijo para cada item (puedes ajustarlo según lo que necesites) */
+  justify-content: center;
+}
+
+.item-exp-card {
+  position: relative;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  /* Opcional, para separar visualmente las tarjetas */
+  padding: 20px;
+  /* Espaciado interno de las tarjetas */
+  box-sizing: border-box;
+  /* Incluye el padding y borde en el tamaño del elemento */
+  -webkit-box-shadow: 0px 6px 15px -3px rgba(142, 0, 255, 0.6);
+  -moz-box-shadow: 0px 6px 15px -3px rgba(142, 0, 255, 0.6);
+  box-shadow: 0px 6px 15px -3px rgba(142, 0, 255, 0.6);
+}
+
+.item-exp-card>img {
+  padding-top: 15px;
+}
+
+.item-exp>.item-exp-card>h4 {
+  font-family: "Montserrat", serif;
+  font-size: 1.3rem;
+  margin-top: 10px;
+}
+
+.item-exp>.item-exp-card>h5 {
+  font-family: "Montserrat", serif;
+  font-weight: 400;
+  font-size: 0.8;
+  padding: 10px 8px;
+}
+
+.item-exp>.item-exp-card>p {
+  font-family: "Montserrat", serif;
+  font-size: 1rem;
+  text-align: justify;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  visibility: hidden;
+  background-color: #201133ec;
+  border-radius: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0s linear 0.3s;
+}
+
+/* Mostrar el contenido cuando se hace hover */
+.item-exp-card:hover>p {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease-in-out, visibility 0s linear 0s;
+}
+
+.projects {
+  height: 100%;
+  margin-top: 20px;
+}
+
+.projects-container {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  color: white;
+  overflow-y: auto;
+}
+
+.projects-container>h2 {
+  font-family: "Montserrat", serif;
+  font-size: 2rem;
+  padding: 10px 5%;
+}
+
+.projects-container>p {
+  font-family: "Montserrat", serif;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.item-project {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.project-card {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  margin-right: 5px;
+  align-content: center;
+}
+
+.img-proyect {
+  width: 40%;
+  height: 100%;
+  position: relative;
+  transition: background-position 0.5s ease;
+  /* Transición suave para mover la imagen */
+}
+
+.img-appMuseo {
+  background-image: url("../img/proyectos/appMuseo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.img-cpems {
+  background-image: url("../img/proyectos/cpemsPlataforma.png");
+  background-repeat: no-repeat;
+  /* Hace que la imagen cubra el contenedor sin distorsión */
+  background-size: contain;
+  /* La imagen cubre todo el div, sin escalar ni deformar */
+}
+
+.img-proyect:hover {
+  background-position: top left;
+  /* Al hacer hover, mueve la imagen hacia la esquina superior izquierda */
+}
+
+.description-item-project {
+  width: 100%;
+  height: 100%;
+  padding-left: 30px;
+}
+
+.description-item-project>h4 {
+  font-family: "Montserrat", serif;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.tag-java {
+  width: 70px;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: "Montserrat", serif;
+  font-size: 0.8rem;
+  border-radius: 9999px;
+  background-color: #e54c27;
+}
+
+.tag-html5 {
+  background-color: #611400;
+  /* Fondo de cada tag */
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  border-radius: 20px;
+  /* Bordes redondeados */
+  display: flex;
+  /* Asegura que el icono y el texto estén alineados */
+  align-items: center;
+  /* Centra el contenido verticalmente */
+  font-family: "Montserrat", serif;
+  font-size: 0.8rem;
+}
+
+.tag-bootstrap {
+  background-color: #7952b3;
+  /* Fondo de cada tag */
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  border-radius: 20px;
+  /* Bordes redondeados */
+  display: flex;
+  /* Asegura que el icono y el texto estén alineados */
+  align-items: center;
+  /* Centra el contenido verticalmente */
+  font-family: "Montserrat", serif;
+  font-size: 0.8rem;
+}
+
+.fa-bootstrap {
+  color: #242424;
+}
+
+.tag-php {
+  background-color: #000000;
+  /* Fondo de cada tag */
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  border-radius: 20px;
+  /* Bordes redondeados */
+  display: flex;
+  /* Asegura que el icono y el texto estén alineados */
+  align-items: center;
+  /* Centra el contenido verticalmente */
+  font-family: "Montserrat", serif;
+  font-size: 0.8;
+  color: white;
+}
+
+.tag-mysql {
+  background-color: #d2d3d3;
+  /* Fondo de cada tag */
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  border-radius: 20px;
+  /* Bordes redondeados */
+  display: flex;
+  /* Asegura que el icono y el texto estén alineados */
+  align-items: center;
+  /* Centra el contenido verticalmente */
+  font-family: "Montserrat", serif;
+  font-size: 0.8rem;
+  color: #180f30;
+}
+
+.description-project {
+  font-family: "Montserrat", serif;
+  font-size: 1.1rem;
+}
+
+.tag-container-item {
+  width: 100%;
+  height: auto;
+  gap: 5px;
+  display: flex;
+  /* Activar flexbox */
+}
+
+/* ************ CONTACTO *********** */
+.contact {
+  margin-top: 20px;
+  /* Espacio entre secciones */
+}
+
+.contact-container {
+  width: 85%;
+  height: 100%;
+  margin: auto auto;
+  color: white;
+}
+
+.contact-container>h2 {
+  font-family: "Montserrat", serif;
+  font-size: 4.5rem;
+  padding: 10px 5%;
+}
+
+.contact-container>h3 {
+  font-family: "Montserrat", serif;
+  font-size: 3rem;
+}
+
+.contact-container>p {
+  font-family: "Montserrat", serif;
+  font-size: 2rem;
+}
+
+/* ************ CONTACTO *********** */
+
+.scroll-icon {
+  text-align: center;
+  padding: 10px 0;
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  cursor: pointer;
+  animation: bounce 2s infinite;
+}
+
+.scroll-subtitle {
+  font-family: "Montserrat", serif;
+  font-size: medium;
+  font-size: 1rem;
+  padding-top: 10px;
+}
+
+/* FOOTER */
+footer {
+  width: 100%;
+  height: 50px;
+  padding-bottom: 15px;
+  bottom: 0;
+  position: static;
+  text-align: center;
+  color: #ffffff;
+  font-family: "Montserrat", serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+  z-index: 1;
+}
+
+/* ANIMACIONES */
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(10px);
+    /* Mover hacia abajo */
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* MEDIA QUERY */

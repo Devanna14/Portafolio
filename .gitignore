@@ -1,0 +1,5 @@
+# Carpeta default de visual studio
+.vscode
+
+# Ignoramos el archivo de la fotografia del perfil
+assets/img/personal/profile1.jpg
