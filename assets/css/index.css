@@ -925,6 +925,7 @@ footer {
 
   .description-project{
     font-size: 0.8rem;
+    padding-bottom: 15px;
   }
 
   .description-item-project > h4 {
