@@ -940,7 +940,7 @@ footer {
     font-size: 0.8;
   }
 
-  .item-exp-card{
+  .tag-container-item{
     flex-wrap: wrap;
   }
 }
