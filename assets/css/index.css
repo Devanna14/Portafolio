@@ -875,7 +875,7 @@ footer {
   .scroll-icon {
     max-height: 35%;
     position: absolute;
-    bottom: 50px;
+    bottom: 150px;
     left: 0;
     right: 0;
   }
@@ -938,5 +938,9 @@ footer {
 
   .projects-container > p {
     font-size: 0.8;
+  }
+
+  .item-exp-card{
+    flex-wrap: wrap;
   }
 }
